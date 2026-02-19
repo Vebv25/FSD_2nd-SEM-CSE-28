@@ -1,0 +1,93 @@
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f9;
+        color: #333;
+    }
+
+    header {
+        background: linear-gradient(90deg, #4e73df, #1cc88a);
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .container {
+        width: 85%;
+        margin: 30px auto;
+    }
+
+    .course-info {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+
+    .course-info h2 {
+        color: #4e73df;
+    }
+
+    .modules {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+
+    .modules h2 {
+        color: #1cc88a;
+    }
+
+    .modules ul {
+        list-style-type: square;
+        padding-left: 20px;
+    }
+
+    .modules li {
+        margin-bottom: 10px;
+        padding: 8px;
+        background-color: #f8f9fc;
+        border-radius: 5px;
+    }
+
+    .video-section {
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 700px;
+        height: 400px;
+        border-radius: 8px;
+    }
+
+    footer {
+        background-color: #2e59d9;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+        iframe {
+            height: 250px;
+        }
+    }
