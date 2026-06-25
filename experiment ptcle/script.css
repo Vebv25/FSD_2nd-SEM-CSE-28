@@ -1,0 +1,32 @@
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+
+.box{
+    background-color: whitesmoke;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input{
+    padding: 8px;
+}
+
+button{
+    padding: 8px 15px;
+    background-color: orange;
+    color: white;
+    border: none;
+}
+
+button:hover{
+    background-color: red;
+}
+
+#result{
+    font-size: 20px;
+    color: green;
+}
