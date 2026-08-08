@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <title>forms </title>
+</head>
+<body>]
+    <form action="./response.html"target="_blank" name="biodata"
+    method=""></form>
+    <fieldset>
+        <legend>biodata</legend>
+        <label for="name">name:
+        </label>
+        <input type=""text" id="name" name="name" placeholder="enter your name" required autofocus maxlength="20" size="30">
+        <br><br>
+        <label for="dob">dob:</label>
+
+            <input type="date" id="dob" name="dob" required>
+            <br><br
+<label for="tel">tel:</label>
+            <input type="tel" id="tel" name="tel"  placeholder="enter your number" required>>
+            <br><br>
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" placeholder="enter your email" required>
+            <br><br>
+            <label for="gender">gender:</label>
+<input type="radio" id="female" name="gender" value="female" required>
+<label for="female">female:</label>
+<input type="radio" id="male" name="gender" value="male" required>
+<label for="male">male:</label>
+<label for="check">Vehicles u have</label>
+<input type="checkbox" id="bike" name="vehicle1" value="bike"/>
+<input type="checkbox" id="car" name="vehicle2" value="car"/>
+<label for="bike">i have a bike</label>
+<label for="car">i have a car</label>
+<br><br>
+<label for="lang">select your programming languages</label>
+<select name="lang" id="lang">
+    <option > select your language</option>
+    <option value="c">c</option>
+    <option value="cpp">cpp</option>
+    <option value="python">python</option>
+    <option value="java">java</option>
+    <label for="appoint">appointment:</label>
+    <input type="time" id="appoint" name="appoint" required/>
+</select><br><br>
+<label for="file">file:</label>
+<input type="file" id="file" name="file" required/>
+<br><br>
+<input type="submit" value="submit"/>
+<input type="reset" value="reset"/>
+<outgroup>
+    <label for="comment">comment:</label>
+    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="enter your comment here"></textarea>
+<!-- </outgroup> this is the one that you must do atleast many times --
+  attribut = required,min/max,minlength,maxlength,pattern,step,type,novalidate> -->
+    </fieldset>
+</body>
+</html>
