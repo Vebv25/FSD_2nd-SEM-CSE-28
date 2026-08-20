@@ -4,8 +4,7 @@ using namespace std ;
 void sum();
 int sum(int, int);
 float sum(int, float, int);
-int main()
-{
+int main(){
     int a, b, r1;
     float r2,  c;
     cout<<"\n Sum function without parameteres: ";
@@ -14,7 +13,7 @@ int main()
     cout<<"\n Enter the number: ";
     cin>>a>>b;
      r1= sum(a, b);
-     cout<< "\n The sum is :" << ;
+     cout<< "\n The sum is :" << endl
      cout<<"\n Sum function wit (const char [28])"\n Enter the three numbers: "
      cout << "\n Enter the three numbers: ";
      cin >> a >> b >> c;

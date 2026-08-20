@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeasonScout — Your season decides your next trip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vebv.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="blob blob-a"></div>
+<div class="blob blob-b"></div>
+<div class="blob blob-c"></div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-mark">
+    <div class="logo3d logo3d--sm" aria-hidden="true">
+      <div class="logo3d-inner">
+        <div class="logo3d-face logo3d-front">
+          <svg viewBox="0 0 60 60" class="logo3d-icon">
+            <circle cx="30" cy="22" r="8" class="logo3d-sun"/>
+            <path d="M4 46 L20 26 L30 38 L40 24 L56 46 Z" class="logo3d-peak"/>
+          </svg>
+        </div>
+        <div class="logo3d-face logo3d-back">
+          <span class="logo3d-mono">SS</span>
+        </div>
+      </div>
+    </div>
+    <span class="nav-mark-text">SeasonScout</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#suggested">Discover</a>
+    <a href="#stay">Stay</a>
+    <a href="#ride">Ride</a>
+    <a href="#safety">Parents &amp; SOS</a>
+    <a href="#budget">Budget</a>
+  </nav>
+  <a class="nav-cta" href="#plan">Plan a trip →</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Trip planning, resequenced</p>
+    <h1>Your season<br>decides your<br><em>next trip.</em></h1>
+    <p class="hero-sub">Stop juggling weather apps, maps, hotel sites and rental apps. Tell SeasonScout your budget and your dates — it finds where you should go, what's worth seeing, where to sleep, and how much it'll cost. All before you've opened a second tab.</p>
+  </div>
+
+  <div class="tilt-wrap">
+  <div class="ticket tilt-card" id="plan">
+    <div class="ticket-row ticket-head">
+      <span>BOARDING PASS</span>
+      <span>SEASONSCOUT AI</span>
+    </div>
+    <div class="ticket-field">
+      <label for="from">FROM</label>
+      <input id="from" type="text" value="Delhi">
+    </div>
+    <div class="ticket-grid">
+      <div class="ticket-field">
+        <label for="budget">BUDGET (₹)</label>
+        <input id="budget" type="number" value="7000" min="1000" step="500">
+      </div>
+      <div class="ticket-field">
+        <label for="days">DAYS</label>
+        <input id="days" type="number" value="5" min="1" max="20">
+      </div>
+    </div>
+    <div class="ticket-grid">
+      <div class="ticket-field">
+        <label for="month">MONTH</label>
+        <select id="month"></select>
+      </div>
+      <div class="ticket-field">
+        <label for="people">TRAVELLERS</label>
+        <input id="people" type="number" value="3" min="1" max="10">
+      </div>
+    </div>
+    <button class="ticket-submit" id="findTrip">Find my trip <span>→</span></button>
+    <div class="ticket-perf"></div>
+    <div class="ticket-result" id="result"></div>
+  </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Scroll to explore</span>
+    <div class="scroll-cue-chevron"></div>
+  </div>
+</section>
+
+<!-- SUGGESTED DESTINATIONS -->
+<section class="suggested" id="suggested">
+  <p class="eyebrow center">Matched to your form above</p>
+  <h2 class="section-title center">Where to go from <em id="fromCityLabel">Delhi</em></h2>
+  <p class="hero-sub center-sub">Flip a card to see the per-person cost breakdown. Don't like these three? Shuffle for more — still matched to this month's season.</p>
+  <button class="shuffle-btn" id="shuffleBtn">
+    <span class="shuffle-icon">🔄</span> Not these? Shuffle
+  </button>
+  <div class="suggest-grid" id="suggestGrid"></div>
+
+  <p class="eyebrow center route-heading" id="routeHeading">The route</p>
+  <div class="route-grid" id="routeGrid"></div>
+</section>
+
+<!-- SEASON DIAL -->
+<section class="dial-section" id="dial">
+  <p class="eyebrow center">The signature — read the year, not the map</p>
+  <h2 class="section-title center">One dial. Twelve months.<br>A different India for each.</h2>
+  <div class="dial-wrap dial-3d">
+    <svg id="seasonDial" viewBox="0 0 520 520" aria-hidden="true"></svg>
+    <div class="dial-readout" id="dialReadout">
+      <span class="dial-month">HOVER A MONTH</span>
+      <p class="dial-desc">The dial reads season, rainfall and road risk together — not just a calendar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow" id="flow">
+  <p class="eyebrow center">How it works</p>
+  <h2 class="section-title center">Ten decisions, made in order.</h2>
+  <div class="flow-steps">
+    <div class="flow-step"><span class="flow-num">01</span><h3>Discover</h3><p>Season, weather, rainfall, road risk, budget and distance narrow the country to three destinations.</p></div>
+    <div class="flow-step"><span class="flow-num">02</span><h3>Hidden gems</h3><p>Waterfalls, viewpoints and villages inside each destination, scored for crowd, cost and safety.</p></div>
+    <div class="flow-step"><span class="flow-num">03</span><h3>Stay</h3><p>Homestays to camps, filtered by price, rating and distance to the gems you picked.</p></div>
+    <div class="flow-step"><span class="flow-num">04</span><h3>Ride</h3><p>Scooty, bike, car or EV rental, priced per day with pickup point and deposit shown upfront.</p></div>
+    <div class="flow-step"><span class="flow-num">05</span><h3>Budget</h3><p>Every rupee — travel, stay, ride, fuel, food, activities, buffer — totalled against what you have.</p></div>
+    <div class="flow-step"><span class="flow-num">06</span><h3>Itinerary</h3><p>A day-by-day plan, with Parents Mode and SOS running quietly underneath the whole trip.</p></div>
+  </div>
+</section>
+
+<!-- STAY MARKETPLACE -->
+<section class="stay" id="stay">
+  <p class="eyebrow center">Stay Marketplace — book without leaving the app</p>
+  <h2 class="section-title center">Homestays to camps,<br>picked for <em>where you're actually going.</em></h2>
+
+  <div class="chip-row" id="stayFilters">
+    <button class="chip" data-filter="budget">₹500–1500/night</button>
+    <button class="chip" data-filter="rating">Rating 4+</button>
+    <button class="chip" data-filter="gems">Near hidden gems</button>
+    <button class="chip" data-filter="cancel">Free cancellation</button>
+  </div>
+
+  <div class="stay-grid" id="stayGrid"></div>
+</section>
+
+<!-- RIDE RENTAL -->
+<section class="ride" id="ride">
+  <p class="eyebrow center">Ride Rental</p>
+  <h2 class="section-title center">Scooty, bike or car —<br>waiting where <em>you</em> land.</h2>
+  <div class="ride-picker">
+    <label for="ridePlace">Renting near</label>
+    <select id="ridePlace"></select>
+  </div>
+  <div class="ride-grid" id="rideGrid"></div>
+</section>
+
+<!-- BUDGET RECEIPT -->
+<section class="budget" id="budget">
+  <div class="budget-left">
+    <p class="eyebrow">The budget engine</p>
+    <h2 class="section-title">It tells you when a trip<br>doesn't add up —<br><em>then fixes it.</em></h2>
+    <p class="hero-sub">Drag the slider. Watch the receipt total in real time, and see what SeasonScout suggests the moment your budget falls short.</p>
+    <div class="slider-row">
+      <label for="budgetSlider">Your budget</label>
+      <input type="range" id="budgetSlider" min="3000" max="12000" step="100" value="6000">
+      <span id="budgetSliderValue" class="mono">₹6,000</span>
+    </div>
+  </div>
+  <div class="tilt-wrap">
+  <div class="receipt tilt-card">
+    <div class="receipt-head">
+      <span>DELHI → COORG</span>
+      <span>5 DAYS</span>
+    </div>
+    <div class="receipt-line"><span>Delhi → Coorg travel</span><span class="mono">₹2,000</span></div>
+    <div class="receipt-line"><span>Stay</span><span class="mono">₹1,500</span></div>
+    <div class="receipt-line"><span>Scooty rental</span><span class="mono">₹1,000</span></div>
+    <div class="receipt-line"><span>Fuel</span><span class="mono">₹700</span></div>
+    <div class="receipt-line"><span>Food</span><span class="mono">₹1,200</span></div>
+    <div class="receipt-line"><span>Activities</span><span class="mono">₹500</span></div>
+    <div class="receipt-line"><span>Emergency buffer</span><span class="mono">₹500</span></div>
+    <div class="receipt-total"><span>Total</span><span class="mono" id="receiptTotal">₹7,400</span></div>
+    <div class="receipt-verdict" id="receiptVerdict"></div>
+  </div>
+  </div>
+</section>
+
+<!-- PARENTS MODE + SOS -->
+<section class="safety" id="safety">
+  <div class="safety-left">
+    <p class="eyebrow">Built for the people back home</p>
+    <h2 class="section-title">Parents Mode<br>&amp; <em>SOS.</em></h2>
+    <p class="hero-sub">Live sharing your parents can actually use — no separate app for them to install. Quiet until the moment it's needed.</p>
+
+    <div class="toggle-row">
+      <label class="switch">
+        <input type="checkbox" id="parentsToggle" checked>
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+      </label>
+      <div>
+        <strong>Share live location with parents</strong>
+        <p class="toggle-status" id="toggleStatus">On · last shared just now</p>
+      </div>
+    </div>
+
+    <div class="contacts">
+      <p class="contacts-label">EMERGENCY CONTACTS</p>
+      <ul class="contacts-list" id="contactsList">
+        <li>Parent 1 <span class="mono">Primary</span></li>
+        <li>Parent 2 <span class="mono">Backup</span></li>
+      </ul>
+      <form class="contact-add" id="contactForm">
+        <input type="text" id="contactName" placeholder="Add another contact" required>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="safety-right">
+    <div class="sos-wrap">
+      <button class="sos-btn" id="sosBtn" aria-label="Hold to send SOS">
+        <svg class="sos-ring" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="54" class="sos-ring-bg"/>
+          <circle cx="60" cy="60" r="54" class="sos-ring-fg" id="sosRingFg"/>
+        </svg>
+        <span class="sos-label" id="sosLabel">HOLD FOR SOS</span>
+      </button>
+      <p class="sos-hint" id="sosHint">Press and hold 3 seconds to alert your emergency contacts with live location.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <p class="eyebrow center">Everything else, in one app</p>
+  <div class="feature-grid">
+    <div class="feature-card tilt-card">
+      <h3><span class="feature-icon">🕵️</span> Hidden Gems</h3>
+      <p>Gem score, crowd level, cost and safety for every waterfall, trail and viewpoint the guidebooks skip.</p>
+    </div>
+    <div class="feature-card tilt-card">
+      <h3><span class="feature-icon">🌦️</span> Weather &amp; Road Alerts</h3>
+      <p>Live rainfall and landslide risk on your exact route, so a hidden gem never turns into a stuck scooty.</p>
+    </div>
+    <div class="feature-card tilt-card">
+      <h3><span class="feature-icon">🛡️</span> Safety Score</h3>
+      <p>Every destination and stay carries a safety score built from road, crowd and connectivity data.</p>
+    </div>
+    <div class="feature-card tilt-card">
+      <h3><span class="feature-icon">📅</span> AI Itinerary</h3>
+      <p>Discover, gems, stay, ride and budget resolved into a day-by-day plan you can still edit by hand.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="logo3d logo3d--lg" aria-hidden="true">
+    <div class="logo3d-inner">
+      <div class="logo3d-face logo3d-front">
+        <svg viewBox="0 0 60 60" class="logo3d-icon">
+          <circle cx="30" cy="22" r="8" class="logo3d-sun"/>
+          <path d="M4 46 L20 26 L30 38 L40 24 L56 46 Z" class="logo3d-peak"/>
+        </svg>
+      </div>
+      <div class="logo3d-face logo3d-back">
+        <span class="logo3d-mono">SS</span>
+      </div>
+    </div>
+  </div>
+  <p class="footer-line">You don't need to know where you want to go.</p>
+  <p class="footer-line footer-line--em">SeasonScout can find it for you.</p>
+  <p class="footer-meta">Built for the season you're actually travelling in.</p>
+</footer>
+
+<script src="vebv.js"></script>
+</body>
+</html>
