@@ -19,19 +19,29 @@
 
 // }
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-template <class T>
-void display(T a){
-    cout<<a<<endl;
-}
+// template <class T>
+// void display(T a){
+//     cout<<a<<endl;
+// }
 
-int main(){
-    display(10);
-    display(45.55);
-    display("sam");
+// int main(){
+//     display(10);
+//     display(45.55);
+//     display("sam");
 
-    return 0;
+//     return 0;
     
+// }
+
+#include <iostream>
+using namespace std;
+void sum(int x, int y){
+    cout<<x<<" "<<y<<endl;
+}
+int main(){
+    sum(10,20);
+    return(0);
 }
